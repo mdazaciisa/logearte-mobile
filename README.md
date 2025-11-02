@@ -55,3 +55,9 @@ Puedes usar las siguientes cuentas (definidas en `components/context/auth-contex
 
 * **Usuario:** `admin@correo.cl`
 * **Contraseña:** `1234`
+
+## 🎥 Video de Demostración
+
+Un breve video de 2 minutos que muestra el flujo completo de la aplicación: manejo de errores en el login, inicio de sesión exitoso, navegación a la pantalla de perfil, y cierre de sesión.
+
+https://youtube.com/shorts/JaKc-A-uTT0?feature=share 
