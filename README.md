@@ -1,50 +1,57 @@
-# Welcome to your Expo app 👋
+# App de Autenticación y Perfil (Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este es un proyecto de aplicación móvil simple, desarrollado con React Native y Expo, que implementa un flujo de autenticación de usuarios. La app utiliza Expo Router para la navegación y React Context para la gestión del estado de autenticación.
 
-## Get started
+## 🚀 Características
 
-1. Install dependencies
+* **Flujo de Autenticación:** Pantalla de Login (con email y contraseña) que redirige a una sección privada.
+* **Navegación Protegida:** Uso de `expo-router` con un layout de Stack que separa las rutas públicas (Login) de las privadas (`(tabs)`).
+* **Gestión de Estado Centralizada:** El estado del usuario (si está logueado o no, y sus datos) se maneja de forma global usando React Context (`AuthProvider`).
+* **Pantalla de Perfil:** Una vez logueado, el usuario puede ver su email y nombre en una pestaña de "Perfil".
+* **Cerrar Sesión:** Funcionalidad para `logout` que limpia el estado y regresa al usuario a la pantalla de Login.
+* **Validación de Contraseña:** Incluye lógica de validación de contraseña en el frontend (largo, mayúsculas, minúsculas, números, caracteres especiales).
+* **UI Personalizada:** Estilos básicos con un fondo de color sólido para el login y botones personalizados.
 
-   ```bash
-   npm install
-   ```
+## 💻 Tecnologías Utilizadas
 
-2. Start the app
+* React Native
+* Expo (SDK 50+)
+* Expo Router (para navegación basada en archivos)
+* React Context API (para gestión de estado)
+* TypeScript
 
-   ```bash
-   npx expo start
-   ```
+## 🛠️ Instalación y Puesta en Marcha
 
-In the output, you'll find options to open the app in a
+Sigue estos pasos para ejecutar el proyecto localmente:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
+    cd tu-repositorio
+    ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+2.  **Instalar dependencias:**
+    Se recomienda usar `npm`.
+    ```bash
+    npm install
+    ```
 
-## Get a fresh project
+3.  **Ejecutar el proyecto:**
+    Inicia el servidor de desarrollo de Expo.
+    ```bash
+    npx expo start
+    ```
 
-When you're ready, run:
+4.  **Probar en el dispositivo:**
+    * Descarga la aplicación **Expo Go** en tu teléfono (iOS o Android).
+    * Escanea el código QR que aparece en la terminal o en el navegador.
 
-```bash
-npm run reset-project
-```
+## 🔑 Credenciales de Prueba
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Puedes usar las siguientes cuentas (definidas en `components/context/auth-context.tsx`) para iniciar sesión:
 
-## Learn more
+* **Usuario:** `user@correo.cl`
+* **Contraseña:** `1234`
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* **Usuario:** `admin@correo.cl`
+* **Contraseña:** `1234`
